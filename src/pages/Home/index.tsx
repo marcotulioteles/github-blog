@@ -1,44 +1,31 @@
-import { Container, DetailsItem, GithubLink, ProfileContainer, ProfileContent, ProfileDetails } from "./styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare, faCodeFork, faBuilding, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { Post } from "./components/Post";
+import { Profile } from "./components/Profile";
+import { Container, PostWrapper, SearchContainer, SearchHeader, SearchInput } from "./styles";
 
 export function Home() {
   return (
     <Container>
-      <ProfileContainer>
+      <Profile />
+      <SearchContainer>
+        <SearchHeader>
+          <h2>Publicações</h2>
+          <span>6 publicações</span>
+        </SearchHeader>
+        <SearchInput
+          placeholder="Buscar conteúdo"
+        />
+      </SearchContainer>
 
-        <img src="https://github.com/marcotulioteles.png" alt="Foto do perfil" />
-
-        <ProfileContent>
-          <h1>Marco Túlio Teles dos Reis</h1>
-          <p>Tristique volutpat pulvinar vel massa, pellentesque egestas.
-            Eu viverra massa quam dignissim aenean malesuada suscipit.
-            Nunc, volutpat pulvinar vel mass.
-          </p>
-
-          <ProfileDetails>
-            <DetailsItem>
-              <FontAwesomeIcon icon={faCodeFork} />
-              <span>marcotulioteles</span>
-            </DetailsItem>
-            <DetailsItem>
-              <FontAwesomeIcon icon={faBuilding} />
-              <span>Ernst & Young</span>
-            </DetailsItem>
-            <DetailsItem>
-              <FontAwesomeIcon icon={faUsers} />
-              <span>13 seguidores</span>
-            </DetailsItem>
-          </ProfileDetails>
-
-        </ProfileContent>
-
-        <GithubLink>
-          <span>github</span>
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-        </GithubLink>
-
-      </ProfileContainer>
+      <PostWrapper>
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+      </PostWrapper>
     </Container>
   )
 }
