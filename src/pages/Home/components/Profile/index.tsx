@@ -1,6 +1,7 @@
-import { faArrowUpRightFromSquare, faBuilding, faCodeFork, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare, faBuilding, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, DetailsItem, GithubLink, ProfileContent, ProfileDetails } from "./styles";
+import { FaGithub } from "react-icons/fa";
 
 export function Profile() {
   return (
@@ -17,7 +18,7 @@ export function Profile() {
 
         <ProfileDetails>
           <DetailsItem>
-            <FontAwesomeIcon icon={faCodeFork} />
+            <FaGithub size={24} />
             <span>marcotulioteles</span>
           </DetailsItem>
           <DetailsItem>

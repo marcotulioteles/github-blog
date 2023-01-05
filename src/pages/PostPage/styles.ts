@@ -21,6 +21,13 @@ export const Header = styled.header`
   background-color: ${({ theme }) => theme.colors["base-background"]};
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+
+  h1 {
+    font-size: ${({ theme }) => theme.font.sizes.xxl};
+    font-weight: 700;
+    color: ${({ theme }) => theme.colors["base-title"]};
+    margin-top: 20px;
+  }
 `;
 
 export const LinksContainer = styled.div`
@@ -43,4 +50,29 @@ export const LinkItem = styled.div<LinkItemProps>`
   a {
     text-decoration: none;
   }
+`;
+
+export const DetailsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 32px;
+`;
+
+export const DetailsItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: ${({ theme }) => theme.font.sizes.lg};
+  color: ${({ theme }) => theme.colors["base-span"]};
+  margin-top: 8px;
+
+  span {
+    font-size: ${({ theme }) => theme.font.sizes.regular};
+  }
+`;
+
+export const MarkdownWrapper = styled.main`
+  width: 100%;
+  padding: 40px 32px;
+  text-align: justify;
 `;
