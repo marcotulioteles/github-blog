@@ -2,6 +2,14 @@ import { Post } from "./components/Post";
 import { Profile } from "./components/Profile";
 import { Container, PostWrapper, SearchContainer, SearchHeader, SearchInput } from "./styles";
 
+const posts = [
+  { id: 'VMnaljhqwi' },
+  { id: 'EtaqwerRoy' },
+  { id: 'IUtwfTwert' },
+  { id: 'ARIgiujrtJ' },
+  { id: 'IYGftiasTR' },
+]
+
 export function Home() {
   return (
     <Container>
@@ -17,14 +25,9 @@ export function Home() {
       </SearchContainer>
 
       <PostWrapper>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        {posts.map(item => (
+          <Post key={item.id} postId={item.id} />
+        ))}
       </PostWrapper>
     </Container>
   )

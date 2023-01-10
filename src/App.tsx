@@ -8,9 +8,8 @@ import { defaultTheme } from "./styles/themes/default";
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <CoverTop />
-      {/* <Home /> */}
-      <PostPage />
+      <Home />
+      {/* <PostPage /> */}
       <GlobalStyle />
     </ThemeProvider>
   )

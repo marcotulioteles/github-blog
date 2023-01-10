@@ -13,6 +13,11 @@ export const Container = styled.div`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
   &:hover {
     outline: 0;
     box-shadow: 0 0 0 2px ${({ theme }) => theme.colors["base-label"]};
